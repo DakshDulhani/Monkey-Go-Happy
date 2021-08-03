@@ -17,11 +17,11 @@ function setup(){
 createCanvas(600,300)
 backkground=createSprite(100,150,100,100)
 backkground.addImage("BG",backkgroundImage)
-backkground.velocityX=-4
+backkground.velocityX=-5
   monkey=createSprite(100,250,20,20)
  monkey.addAnimation("walking",monkey_running) 
  monkey.scale= size
-foodGroup = createGroup();
+  foodGroup = createGroup();
   obstacleGroup = createGroup();
   ground=createSprite(300,280,600,10)
 
@@ -69,7 +69,7 @@ function  banana(){
     banana.y = Math.round(random(120,200));
     banana.addImage(bananaImage);
     banana.scale = 0.1;
-    banana.velocityX = -3;
+    banana.velocityX = -5;
     banana.lifetime = -1;
     
     banana.depth = monkey.depth;
@@ -87,7 +87,7 @@ function obstacle(){
   var obstacle = createSprite(600,300,20,10);
     obstacle.y = Math.round(random(250,250));
     obstacle.addImage("stone",obstacleImage);
-    obstacle.velocityX = -3;
+    obstacle.velocityX = -5;
     obstacle.scale = 0.12;
     obstacle.lifetime = -1;
     obstacleGroup.add(obstacle);
